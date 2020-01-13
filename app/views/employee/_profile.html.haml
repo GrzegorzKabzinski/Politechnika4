@@ -1,0 +1,11 @@
+.user-profile
+  %h1
+    =worker.full_name
+  %h2
+    =worker.role
+  %h3
+    =worker.affiliation
+  .buttons
+    = link_to 'Publiczny profil', worker.link
+    = button_to "Wygeneruj vCard", button_path, method: :get, params: { full_name: worker.full_name }
+    -#= button_to '+', { controller: "employee", action: "vcard", full_name: worker.full_name}, method: :get

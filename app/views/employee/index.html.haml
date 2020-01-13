@@ -1,0 +1,4 @@
+.userlist.userdetails
+  - @workers.each do |worker|
+    = render partial: 'profile', locals: { worker: worker }
+
